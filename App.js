@@ -1,8 +1,9 @@
 import { StatusBar } from "expo-status-bar";
-import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, StyleSheet, Text, View, ScrollView } from "react-native";
 
 import Categories from "./components/Categories";
 import HeaderTabs from "./components/HeaderTabs";
+import RestaurantItem from "./components/RestaurantItem";
 import SearchBar from "./components/SearchBar";
 
 export default function App() {
@@ -11,8 +12,11 @@ export default function App() {
       <View style={{ backgroundColor: "white", padding: 15 }}>
         <HeaderTabs />
         <SearchBar />
-        <Categories />
-      </View>
+        </View>
+        <ScrollView showVerticalScrollIndicator={false}>
+          <Categories />
+          <RestaurantItem />
+        </ScrollView>
     </SafeAreaView>
   );
 }
