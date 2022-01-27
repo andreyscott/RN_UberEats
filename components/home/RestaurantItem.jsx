@@ -32,7 +32,7 @@ export const localRestaurants = [
   },
 ];
 
-export default function Restaurant({ navigation, ...props }) {
+ function RestaurantItems({ navigation, ...props }) {
   return (
     <>
       {props.restaurantData.map((restaurant, index) => (
@@ -104,3 +104,5 @@ const RestaurantInfo = (props) => (
     </View>
   </View>
 );
+
+export default RestaurantItems;
